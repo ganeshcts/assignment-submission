@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        maven { url "http://platform-acceleration-lab-maven.s3.amazonaws.com" }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "io.pivotal.pal.assignments:assignments-plugin:4.5.1"
+    }
+}
+
+apply plugin: "io.pivotal.pal.assignments.plugin"
+
+assignments {
+//    apiUrl = "https://cognizant-waveland.education.pivotal.io/c/paldeveloperjava20global"
+    apiUrl = "https://cognizant-waveland.education.pivotal.io"
+    cohortIdentifier = "paldeveloperjava20global"
+//    cohortIdentifier = "pal-training-program-2020--java-batch-2"
+    emails = [
+            "ganeshmuthukumar.g@cognizant.com"
+    ]
+//    courseCode = "CND"
+}
+
+defaultTasks "tasks"
